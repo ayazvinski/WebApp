@@ -17,5 +17,19 @@ public class Form1 extends HttpServlet {
         resp.getWriter().println("hello from post. good to see you, " + firstName + " " + lastName + "! :)");
     }
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        resp.getWriter().println("" +
+                "<html lang=\"en\">\n" +
+                "<body>\n" +
+                "    <form method=\"post\">\n" +
+                "        <input type=\"text\" name=\"firstName\">\n" +
+                "        <input type=\"text\" name=\"lastName\">\n" +
+                "        <input type=\"submit\">\n" +
+                "    </form>\n" +
+                "</body>\n" +
+                "</html>");
+    }
+
 
 }
