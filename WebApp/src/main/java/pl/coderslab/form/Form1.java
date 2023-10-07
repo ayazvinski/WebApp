@@ -1,0 +1,21 @@
+package pl.coderslab.form;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+@WebServlet (name = "Form1", urlPatterns = "/post1")
+
+public class Form1 extends HttpServlet {
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String firstName = req.getParameter("firstName");
+        String lastName = req.getParameter("lastName");
+        resp.getWriter().println("hello from post. good to see you, " + firstName + " " + lastName + "! :)");
+    }
+
+
+}
