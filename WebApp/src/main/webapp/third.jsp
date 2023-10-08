@@ -15,7 +15,5 @@
 <p>${empty param.a ? "brak" : param.a}</p>
 <p>${empty param.b ? "brak" : param.b}</p>
 
-
-
 </body>
 </html>
