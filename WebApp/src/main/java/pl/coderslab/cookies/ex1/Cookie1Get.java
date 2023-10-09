@@ -1,4 +1,4 @@
-package pl.coderslab.Cookies.ex1;
+package pl.coderslab.cookies.ex1;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
