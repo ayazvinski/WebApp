@@ -15,11 +15,13 @@ public class Cookie4Show extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //resp.setContentType("text/html");
+        resp.setContentType("text/html");
         Cookie [] cookies = req.getCookies();
         String delUrl = req.getContextPath() + "/removeCookie?cookieName=";
         for (Cookie cookie:cookies){
-            resp.getWriter().println(cookie.getName() + " " + cookie.getValue() + " " + delUrl+cookie.getName());
+            resp.getWriter().println("<html><body>");
+            resp.getWriter().println(cookie.getName() + " " + cookie.getValue() + " " + "<a href=\"" + delUrl +cookie.getName() + "\">Usun ciasteckzo!</a>");
+            resp.getWriter().println("</body></html>");
         }
 
         }
