@@ -8,15 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet (name = "Session1Set", urlPatterns = "/session1Set")
+@WebServlet ("/session1Del")
 
-public class Session1Set extends HttpServlet {
-
+public class Session1Del extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        session.setAttribute("counter", 0);
+        session.removeAttribute("counter");
 
-        resp.getWriter().println("Ustawiono sesje!");
+        resp.getWriter().println("usunięto counter z sesji");
     }
 }
