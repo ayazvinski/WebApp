@@ -11,9 +11,8 @@
     <title>Title</title>
 </head>
 <body>
+<%@ include file="header.jsp"%>
 <jsp:include page="header.jsp"/>
-<p>welcome to my Best app! The answer is ${2+40}</p>
-
 <jsp:include page="footer.jsp"/>
 
 </body>
