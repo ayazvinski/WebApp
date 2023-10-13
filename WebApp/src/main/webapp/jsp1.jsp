@@ -20,9 +20,9 @@ W przypadku braku wartości ma się wyświetlić napis guest.
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>MVC11</title>
 </head>
 <body>
-
+<h1>${empty param.role ? "Guest" : param.role}</h1>
 </body>
 </html>

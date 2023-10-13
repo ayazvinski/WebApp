@@ -1,23 +1,23 @@
-package pl.coderslab;
+package pl.coderslab.jsp;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet ("/mvc11")
+@WebServlet ("/ciachoJSP")
 
-public class Mvc11 extends HttpServlet {
+public class ciachoDlaJSP extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String role = req.getParameter("role");
-        if(role == null){
-            req.setAttribute("userRole", "Role_" + role.toUpperCase());
-        }
+        Cookie cookie = new Cookie("foo","bar");
+        cookie.setMaxAge(3600);
 
-        getServletContext().getRequestDispatcher("/jsp1.jsp").forward(req,resp);
+        resp.addCookie(cookie);
+        resp.getWriter().println("Ciasteczno ustawiono!");
     }
 }
