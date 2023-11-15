@@ -22,7 +22,10 @@ public class Get4 extends HttpServlet {
             return;
         }
 
-        resp.getWriter().println("company: " + "\n" + " - " + company + "\n" + "learn: ");
+        resp.getWriter().println("company: "
+                + "\n" + " - " + company
+                + "\n" + "learn: ");
+
         for(String language: languages){
             resp.getWriter().println(" - " + language);
         }

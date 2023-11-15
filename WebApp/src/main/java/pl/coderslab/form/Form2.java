@@ -14,6 +14,7 @@ public class Form2 extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String[] badWords = {"cholera", "idiota","frajer"};
 
+
         String inputMessage = req.getParameter("userMessage");
         String userAcknowledge = req.getParameter("userAcknowledge");
 
